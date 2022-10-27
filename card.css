@@ -1,0 +1,72 @@
+body{
+    height: 96vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 480px;
+    height: 480px;
+    background-color: #f6f6f6;
+    border-radius: 5px;    
+}
+.card{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: auto;
+    perspective-origin: center center;
+    perspective: 500px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    cursor: pointer;
+}
+.card span,img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 10px;
+}
+.question{
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:cursive;
+    font-size: 35px;
+    font-weight: bold;
+    color: aqua;
+    backface-visibility: hidden;
+}
+.fliped{
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+.vvv{
+    animation: zzz .4s linear ;
+}
+@keyframes zzz {
+    0%,100%{
+        transform: translate(0px);
+    }
+    20%{
+        transform: translate(5px);
+    }
+    40%{
+        transform: translate(-5px);
+    }
+    60%{
+        transform: translate(5px);
+    }
+    80%{
+        transform: translate(-5px);
+    }
+}
+youssef modification
